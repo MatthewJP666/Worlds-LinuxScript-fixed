@@ -6,7 +6,7 @@ You don't need to clone this repository. Simply download `worlds-installer.sh` a
 
 ```
 $ mkdir Worlds
-$ wget https://raw.githubusercontent.com/Vencorr/Worlds-LinuxScript/master/worlds-installer.sh
+$ wget https://gitlab.com/Vencorr/Worlds-LinuxScript/-/blob/master/worlds-installer.sh
 $ chmod +x worlds-installer.sh
 $ ./worlds-installer.sh
 ```
