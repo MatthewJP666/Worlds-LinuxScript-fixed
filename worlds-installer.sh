@@ -147,8 +147,8 @@ worlds () {
 }
 
 launchscript () {
-	wget -O"$WORLDSDIR/launch.sh" "https://raw.githubusercontent.com/Vencorr/Worlds-LinuxScript/master/launch.sh"
-	wget -O"$WORLDSDIR/icon.png" "https://raw.githubusercontent.com/Vencorr/Worlds-LinuxScript/master/icon.png"
+	wget -O"$WORLDSDIR/launch.sh" "https://gitlab.com/Vencorr/Worlds-LinuxScript/-/raw/master/launch.sh"
+	wget -O"$WORLDSDIR/icon.png" "https://gitlab.com/Vencorr/Worlds-LinuxScript/-/raw/master/icon.png"
 	rm "$WORLDSDIR/wrldslinux"
 	echo "# Configuration for Worlds on Linux." > "$WORLDSDIR/wrldslinux"
 	echo "export WINE=\"$WINE\"" >> "$WORLDSDIR/wrldslinux"
@@ -162,7 +162,7 @@ launchscript () {
 }
 
 menufile () {
-    wget -O"$WORLDSDIR/worlds.desktop" "https://raw.githubusercontent.com/Vencorr/Worlds-LinuxScript/master/worlds.desktop"
+    wget -O"$WORLDSDIR/worlds.desktop" "https://gitlab.com/Vencorr/Worlds-LinuxScript/-/raw/master/worlds.desktop"
     echo "" > "$HOME/.local/share/applications/worlds.desktop" #Making sure the file is clear.
     while read line 
     do

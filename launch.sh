@@ -183,7 +183,7 @@ cache () {
 }
 
 update () {
-	NEWLAUNCHFILE="https://raw.githubusercontent.com/Vencorr/Worlds-LinuxScript/master/launch.sh"
+	NEWLAUNCHFILE="https://gitlab.com/Vencorr/Worlds-LinuxScript/-/raw/master/launch.sh"
 	UPDATEFILE="$WORLDSDIR/.update.sh"
 	touch "$UPDATEFILE"
 	echo "wget -N -O\"$WORLDSDIR/launch.sh\" \"$NEWLAUNCHFILE\"" >> "$UPDATEFILE"
