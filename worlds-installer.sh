@@ -108,28 +108,28 @@ work () {
 
 download1922 () {
 	export WORLDSINSTALL="$WINEPREFIX/drive_c/Program Files/Worlds Inc/WorldsPlayer - Win7"
-	wget -O$INSTALLER "http://cache.worlds.com/test/WorldsPlayerWin7-1922a10.exe" 2>&1 | sed -u 's/.* \([0-9]\+%\)\ \+\([0-9.]\+.\) \(.*\)/\1\n# Downloading at \2\/s, ETA \3/' | zenity --progress --title="$WTITLE - Worlds $WORLDSVER" --text="Starting Download.." --width=300 --height=50 --auto-close --auto-kill
+	wget -O$INSTALLER "https://web.archive.org/web/20211127155918id_/http://www.worlds.net/test/WorldsPlayerWin7-1922a10.exe" 2>&1 | sed -u 's/.* \([0-9]\+%\)\ \+\([0-9.]\+.\) \(.*\)/\1\n# Downloading at \2\/s, ETA \3/' | zenity --progress --title="$WTITLE - Worlds $WORLDSVER" --text="Starting Download.." --width=300 --height=50 --auto-close --auto-kill
 }
 
 download1920 () {
 	export WORLDSINSTALL="$WINEPREFIX/drive_c/Program Files/Worlds.com/WorldsPlayer - Win7"
-	wget -O$INSTALLER "https://wirlaburla.com/library/WorldsPlayer/Software/Worlds1920.exe" 2>&1 | sed -u 's/.* \([0-9]\+%\)\ \+\([0-9.]\+.\) \(.*\)/\1\n# Downloading at \2\/s, ETA \3/' | zenity --progress --title="$WTITLE - Worlds $WORLDSVER" --text="Starting Download.." --width=300 --height=50 --auto-close --auto-kill
+	wget -O$INSTALLER "https://wirlaburla.com/files/WorldsPlayer/software/Worlds1920.exe" 2>&1 | sed -u 's/.* \([0-9]\+%\)\ \+\([0-9.]\+.\) \(.*\)/\1\n# Downloading at \2\/s, ETA \3/' | zenity --progress --title="$WTITLE - Worlds $WORLDSVER" --text="Starting Download.." --width=300 --height=50 --auto-close --auto-kill
 }
 
 download1900 () {
 	export WORLDSINSTALL="$WINEPREFIX/drive_c/Program Files/Worlds/WorldsPlayer by Worlds.com"
-	wget -O$INSTALLER "https://wirlaburla.com/library/WorldsPlayer/Software/Worlds1900.exe" 2>&1 | sed -u 's/.* \([0-9]\+%\)\ \+\([0-9.]\+.\) \(.*\)/\1\n# Downloading at \2\/s, ETA \3/' | zenity --progress --title="$WTITLE - Worlds $WORLDSVER" --text="Starting Download..." --width=300 --height=50 --auto-close --auto-kill
+	wget -O$INSTALLER "https://wirlaburla.com/files/WorldsPlayer/software/Worlds1900.exe" 2>&1 | sed -u 's/.* \([0-9]\+%\)\ \+\([0-9.]\+.\) \(.*\)/\1\n# Downloading at \2\/s, ETA \3/' | zenity --progress --title="$WTITLE - Worlds $WORLDSVER" --text="Starting Download..." --width=300 --height=50 --auto-close --auto-kill
 	java
 }
 
 download1890 () {
 	export WORLDSINSTALL="$WINEPREFIX/drive_c/Program Files/Worlds/WorldsPlayer by Worlds.com"
-	wget -O$INSTALLER "https://wirlaburla.com/library/WorldsPlayer/Software/Worlds1890.exe" 2>&1 | sed -u 's/.* \([0-9]\+%\)\ \+\([0-9.]\+.\) \(.*\)/\1\n# Downloading at \2\/s, ETA \3/' | zenity --progress --title="$WTITLE - Worlds $WORLDSVER" --text="Starting Download..." --width=300 --height=50 --auto-close --auto-kill
+	wget -O$INSTALLER "https://wirlaburla.com/files/WorldsPlayer/software/Worlds1890.exe" 2>&1 | sed -u 's/.* \([0-9]\+%\)\ \+\([0-9.]\+.\) \(.*\)/\1\n# Downloading at \2\/s, ETA \3/' | zenity --progress --title="$WTITLE - Worlds $WORLDSVER" --text="Starting Download..." --width=300 --height=50 --auto-close --auto-kill
 	java
 }
 
 java () {
-	wget -O"$WORLDSDIR/JavaInstaller.exe" "http://users.worldsonline.com/jimbly/java/jre-6u23-windows-i586-s.exe" 2>&1 | sed -u 's/.* \([0-9]\+%\)\ \+\([0-9.]\+.\) \(.*\)/\1\n# Downloading at \2\/s, ETA \3/' | zenity --progress --title="$WTITLE - Downloading Java 6" --text="Starting Download..." --width=300 --height=50 --auto-close --auto-kill
+	wget -O"$WORLDSDIR/JavaInstaller.exe" "https://web.archive.org/web/20211127155918id_/http://users.worldsonline.com/jimbly/java/jre-6u23-windows-i586-s.exe" 2>&1 | sed -u 's/.* \([0-9]\+%\)\ \+\([0-9.]\+.\) \(.*\)/\1\n# Downloading at \2\/s, ETA \3/' | zenity --progress --title="$WTITLE - Downloading Java 6" --text="Starting Download..." --width=300 --height=50 --auto-close --auto-kill
 	$WINE "$WORLDSDIR/JavaInstaller.exe" /s 2>&1 | zenity --title="$WTITLE - Installing Java" --progress --pulsate --auto-close --width=300 --height=50 --auto-kill
 }
 
